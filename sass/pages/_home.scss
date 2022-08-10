@@ -4,7 +4,7 @@
 }
 
 .about {
-  height: 110vh;
+  height: 120vh;
   &__stat {
     display: flex;
     justify-content: space-around;
@@ -24,5 +24,40 @@
     height: 100%;
     margin: 0 auto;
     display: block;
+  }
+}
+
+.features {
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__info {
+    width: 40%;
+  }
+
+  &__img-box {
+    width: 40%;
+    height: 70vh;
+    background-image: url(/Buisness-landing-page/images/pic-3.jpg);
+    background-size: cover;
+    background-position: right top;
+  }
+
+  &__img-box--1 {
+    width: 40%;
+    height: 70vh;
+    background-image: url(/Buisness-landing-page/images/pic-4.jpg);
+    background-size: cover;
+    background-position: right top;
+  }
+
+  &__img-box--2 {
+    width: 40%;
+    height: 70vh;
+    background-image: url(/Buisness-landing-page/images/pic-5.jpg);
+    background-size: cover;
+    background-position: center;
   }
 }
