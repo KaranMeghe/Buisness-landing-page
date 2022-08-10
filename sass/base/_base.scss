@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:wght@400;500;600;700;800;900&family=Orbitron:wght@700&family=Roboto:wght@300;400;500;700&family=Sansita+Swashed:wght@300&display=swap");
+
+:root {
+  --bg-gray: #636c79;
+  --light-green: #8bb7a2;
+  --bg-dark: #10181d;
+  --white: #ffffff;
+  --white-dim: #cccccc;
+  --text-gray: #8c8c8c;
+  --text-dark-gray: #424242;
+  --text-dark: #1b1d21;
+  --font-family: "Lato", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 10/16 = 62.5%
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.margin-small {
+  margin: 3rem 0;
+}

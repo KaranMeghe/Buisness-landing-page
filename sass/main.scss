@@ -1,0 +1,17 @@
+// abstrcts folder
+@import "abstracts/mixins";
+
+// base folder
+@import "base/base";
+@import "base/typography";
+
+// components folder
+@import "components/button";
+
+// layout folder
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+
+// pages folder
+@import "pages/home";

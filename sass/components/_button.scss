@@ -1,0 +1,15 @@
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  font-size: 1.6rem;
+  border: 1px solid var(--white-dim);
+  padding: 1rem 4.5rem;
+}
+
+.btn-primary {
+  background-color: var(--light-green);
+  color: var(--white);
+  border: none;
+  font-size: 1.8rem;
+  padding: 1.5rem 4rem;
+}

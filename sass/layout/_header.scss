@@ -1,0 +1,50 @@
+.header {
+  height: 90vh;
+  background-color: var(--bg-gray);
+
+  &__hero {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    align-items: center;
+    height: 80vh;
+    padding: 0 8rem;
+
+    &-imagebox {
+      width: 36%;
+      height: 80%;
+      border-radius: 0.8rem;
+      background-image: url(/Buisness-landing-page/images/hero.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    &-form {
+      width: 100%;
+      position: relative;
+      &--input {
+        width: 92%;
+        padding: 2.4rem 4rem;
+      }
+
+      &--icon {
+        position: absolute;
+        left: 2%;
+        top: 30%;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  ::placeholder {
+    font-size: 1.8rem;
+  }
+
+  &__hero-infobox {
+    width: 40%;
+
+    &--btn {
+      position: absolute;
+      left: 60%;
+      top: 12%;
+    }
+  }
+}
