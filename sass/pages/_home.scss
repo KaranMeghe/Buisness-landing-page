@@ -61,3 +61,58 @@
     background-position: center;
   }
 }
+
+// section team
+.team {
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+
+    &--heading {
+      width: 40%;
+    }
+
+    &--parabox {
+      width: 40%;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    justify-content: space-around;
+
+    &-box {
+      width: 30%;
+      &--para {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: var(--text-gray);
+      }
+    }
+
+    &--img {
+      background-image: url(/Buisness-landing-page/images/team-1.jpg);
+      height: 58vh;
+      background-position: top;
+      background-size: cover;
+    }
+
+    &--img1 {
+      background-image: url(/Buisness-landing-page/images/team-2.jpg);
+      height: 58vh;
+      background-position: top;
+      background-size: cover;
+    }
+
+    &--img2 {
+      background-image: url(/Buisness-landing-page/images/team-3.jpg);
+      height: 58vh;
+      background-position: top;
+      background-size: cover;
+    }
+  }
+  &__btn {
+    width: 100%;
+    text-align: center;
+  }
+}

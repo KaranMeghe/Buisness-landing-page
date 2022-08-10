@@ -65,6 +65,10 @@ a {
   font-size: 4rem;
 }
 
+.heading-tertiary {
+  font-size: 2rem;
+}
+
 .heading-secondary-big {
   font-size: 5rem;
 }
@@ -230,4 +234,49 @@ a {
   background-image: url(/Buisness-landing-page/images/pic-5.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.team__content-box {
+  display: flex;
+  justify-content: space-between;
+}
+.team__content-box--heading {
+  width: 40%;
+}
+.team__content-box--parabox {
+  width: 40%;
+}
+.team__intro {
+  display: flex;
+  justify-content: space-around;
+}
+.team__intro-box {
+  width: 30%;
+}
+.team__intro-box--para {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--text-gray);
+}
+.team__intro--img {
+  background-image: url(/Buisness-landing-page/images/team-1.jpg);
+  height: 58vh;
+  background-position: top;
+  background-size: cover;
+}
+.team__intro--img1 {
+  background-image: url(/Buisness-landing-page/images/team-2.jpg);
+  height: 58vh;
+  background-position: top;
+  background-size: cover;
+}
+.team__intro--img2 {
+  background-image: url(/Buisness-landing-page/images/team-3.jpg);
+  height: 58vh;
+  background-position: top;
+  background-size: cover;
+}
+.team__btn {
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
