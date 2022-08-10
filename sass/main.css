@@ -39,15 +39,40 @@ a {
   margin: 3rem 0;
 }
 
+.margin-vsmall {
+  margin: 2rem 0;
+}
+
+.margin-medium {
+  margin: 6rem 0;
+}
+
 .heading-primary {
   font-size: 6.2rem;
   color: var(--white);
+}
+
+.stat-heading {
+  color: var(--bg-dark);
+  font-size: 4rem;
+}
+
+.heading-secondary {
+  font-size: 4rem;
 }
 
 .hero-text {
   font-size: 2rem;
   line-height: 1.5;
   color: var(--white-dim);
+}
+
+.center {
+  text-align: center;
+}
+
+.about__stat-txt {
+  font-size: 1.8rem;
 }
 
 .btn-secondary {
@@ -87,7 +112,7 @@ a {
   background-size: cover;
 }
 .header__hero-form {
-  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 .header__hero-form--input {
@@ -140,4 +165,27 @@ a {
 .container {
   max-width: 124.8rem;
   margin: 0 auto;
+}
+
+.about {
+  height: 110vh;
+}
+.about__stat {
+  display: flex;
+  justify-content: space-around;
+}
+.about__stat-box {
+  text-align: center;
+}
+.about__image-box {
+  background-image: url(/Buisness-landing-page/images/pic-2.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 70vh;
+}
+.about__image {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

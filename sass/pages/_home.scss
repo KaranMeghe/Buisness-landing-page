@@ -2,3 +2,27 @@
   max-width: 124.8rem;
   margin: 0 auto;
 }
+
+.about {
+  height: 110vh;
+  &__stat {
+    display: flex;
+    justify-content: space-around;
+
+    &-box {
+      text-align: center;
+    }
+  }
+  &__image-box {
+    background-image: url(/Buisness-landing-page/images/pic-2.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 70vh;
+  }
+  &__image {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}

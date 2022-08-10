@@ -2,9 +2,26 @@
   font-size: 6.2rem;
   color: var(--white);
 }
+.stat-heading {
+  color: var(--bg-dark);
+  font-size: 4rem;
+}
+.heading-secondary {
+  font-size: 4rem;
+}
 
 .hero-text {
   font-size: 2rem;
   line-height: 1.5;
   color: var(--white-dim);
+}
+
+.center {
+  text-align: center;
+}
+
+.about {
+  &__stat-txt {
+    font-size: 1.8rem;
+  }
 }
