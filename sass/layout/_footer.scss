@@ -1,0 +1,52 @@
+.footer {
+  background-color: var(--bg-dark);
+  height: 50vh;
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    border-bottom: 1px solid var(--bg-gray);
+  }
+
+  &__socialmedia {
+    display: flex;
+    align-items: center;
+    &-list--icon {
+      margin-left: 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50%;
+      padding: 1rem;
+      background-color: rgba(99, 108, 121, 0.5);
+      opacity: 0.8;
+    }
+  }
+
+  &__img {
+    width: 70%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+
+    &-container {
+      color: var(--white);
+      margin-top: 3rem;
+    }
+
+    &-li {
+      color: var(--text-gray);
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.fa-brands {
+  color: var(--white);
+}
