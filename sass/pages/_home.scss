@@ -5,9 +5,17 @@
 
 .about {
   height: 120vh;
+
+  @include respond(phone) {
+    height: 150vh;
+  }
   &__stat {
     display: flex;
     justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
 
     &-box {
       text-align: center;
@@ -32,9 +40,20 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+      padding: 0.5rem;
+      margin: 0rem;
+    }
   }
   &__info {
     width: 40%;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__img-box {
@@ -43,6 +62,10 @@
     background-image: url(".././images/pic-3.jpg");
     background-size: cover;
     background-position: right top;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__img-box--1 {
@@ -51,6 +74,10 @@
     background-image: url(".././images/pic-4.jpg");
     background-size: cover;
     background-position: right top;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__img-box--2 {
@@ -59,6 +86,10 @@
     background-image: url(".././images/pic-5.jpg");
     background-size: cover;
     background-position: center;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }
 
@@ -68,12 +99,26 @@
     display: flex;
     justify-content: space-between;
 
+    @include respond(phone) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     &--heading {
       width: 40%;
+
+      @include respond(phone) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     &--parabox {
       width: 40%;
+
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
 
@@ -81,8 +126,17 @@
     display: flex;
     justify-content: space-around;
 
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
     &-box {
       width: 30%;
+
+      @include respond(phone) {
+        width: 100%;
+        text-align: center;
+      }
       &--para {
         font-size: 1.8rem;
         line-height: 1.6;

@@ -10,11 +10,67 @@
   &__list {
     display: flex;
 
+    @include respond(phone) {
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--white);
+
+      text-align: center;
+      position: fixed;
+      transition: 0.3s;
+      left: -100%;
+      top: 70px;
+      height: 36 vh;
+    }
+
     &--item {
       font-size: 1.8rem;
       color: var(--white);
       margin-left: 4rem;
       font-weight: 400;
+
+      @include respond(phone) {
+        color: var(--text-dark);
+        margin: 2rem 0rem;
+        // text-align: center;
+      }
     }
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+    margin-right: 2rem;
+  }
+}
+
+.bar {
+  display: block;
+  background-color: #fff;
+  width: 2.5rem;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@include respond(phone) {
+  .active {
+    left: 0%;
+  }
+
+  .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }

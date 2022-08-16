@@ -1,6 +1,10 @@
 .heading-primary {
   font-size: 6.2rem;
   color: var(--white);
+
+  @include respond(phone) {
+    font-size: 5.2rem;
+  }
 }
 .stat-heading {
   color: var(--bg-dark);

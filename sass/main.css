@@ -1,3 +1,22 @@
+/*
+0 - 320px:      i-phone-se
+321 - 360px:    i-phone-12-mini/motog4 
+361px - 500px:    i-phone-6/7/8/11pro/
+501px - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- iPhone-se
+- iPhone-12-mini
+- iPhone-11-12/pro
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Nunito:wght@400;500;600;700;800;900&family=Orbitron:wght@700&family=Roboto:wght@300;400;500;700&family=Sansita+Swashed:wght@300&display=swap");
 :root {
   --bg-gray: #636c79;
@@ -22,9 +41,19 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: var(--font-family);
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 li {
@@ -54,6 +83,11 @@ a {
 .heading-primary {
   font-size: 6.2rem;
   color: var(--white);
+}
+@media (max-width: 768px) {
+  .heading-primary {
+    font-size: 5.2rem;
+  }
 }
 
 .stat-heading {
@@ -144,9 +178,19 @@ a {
   align-items: center;
   height: 20vh;
 }
+@media (max-width: 768px) {
+  .footer__list {
+    align-items: baseline;
+  }
+}
 .footer__list-container {
   color: var(--white);
   margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .footer__list-container {
+    margin-left: 1rem;
+  }
 }
 .footer__list-li {
   color: var(--text-gray);
@@ -162,6 +206,11 @@ a {
   height: 90vh;
   background-color: var(--bg-gray);
 }
+@media (max-width: 768px) {
+  .header {
+    height: 100vh;
+  }
+}
 .header__hero {
   display: flex;
   justify-content: space-evenly;
@@ -169,6 +218,13 @@ a {
   align-items: center;
   height: 80vh;
   padding: 0 8rem;
+}
+@media (max-width: 768px) {
+  .header__hero {
+    flex-direction: column;
+    padding: 0 1.2rem;
+    margin-top: 5rem;
+  }
 }
 .header__hero-imagebox {
   width: 36%;
@@ -178,6 +234,11 @@ a {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .header__hero-imagebox {
+    width: 100%;
+  }
+}
 .header__hero-form {
   max-width: 100%;
   position: relative;
@@ -185,6 +246,11 @@ a {
 .header__hero-form--input {
   width: 92%;
   padding: 2.4rem 4rem;
+}
+@media (max-width: 768px) {
+  .header__hero-form--input {
+    width: 100%;
+  }
 }
 .header__hero-form--icon {
   position: absolute;
@@ -203,6 +269,12 @@ a {
 }
 .header__hero-infobox {
   width: 40%;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .header__hero-infobox {
+    width: 100%;
+  }
 }
 .header__hero-infobox--btn {
   position: absolute;
@@ -222,13 +294,66 @@ a {
 .navbar__list {
   display: flex;
 }
+@media (max-width: 768px) {
+  .navbar__list {
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white);
+    text-align: center;
+    position: fixed;
+    transition: 0.3s;
+    left: -100%;
+    top: 70px;
+    height: 36 vh;
+  }
+}
 .navbar__list--item {
   font-size: 1.8rem;
   color: var(--white);
   margin-left: 4rem;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .navbar__list--item {
+    color: var(--text-dark);
+    margin: 2rem 0rem;
+  }
+}
 
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-right: 2rem;
+  }
+}
+
+.bar {
+  display: block;
+  background-color: #fff;
+  width: 2.5rem;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .active {
+    left: 0%;
+  }
+  .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
 .container {
   max-width: 124.8rem;
   margin: 0 auto;
@@ -237,9 +362,19 @@ a {
 .about {
   height: 120vh;
 }
+@media (max-width: 768px) {
+  .about {
+    height: 150vh;
+  }
+}
 .about__stat {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .about__stat {
+    flex-direction: column;
+  }
 }
 .about__stat-box {
   text-align: center;
@@ -262,8 +397,21 @@ a {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .features__row {
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 0rem;
+  }
+}
 .features__info {
   width: 40%;
+}
+@media (max-width: 768px) {
+  .features__info {
+    width: 100%;
+    text-align: center;
+  }
 }
 .features__img-box {
   width: 40%;
@@ -272,12 +420,22 @@ a {
   background-size: cover;
   background-position: right top;
 }
+@media (max-width: 768px) {
+  .features__img-box {
+    width: 100%;
+  }
+}
 .features__img-box--1 {
   width: 40%;
   height: 70vh;
   background-image: url(".././images/pic-4.jpg");
   background-size: cover;
   background-position: right top;
+}
+@media (max-width: 768px) {
+  .features__img-box--1 {
+    width: 100%;
+  }
 }
 .features__img-box--2 {
   width: 40%;
@@ -286,23 +444,56 @@ a {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 768px) {
+  .features__img-box--2 {
+    width: 100%;
+  }
+}
 
 .team__content-box {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .team__content-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .team__content-box--heading {
   width: 40%;
 }
+@media (max-width: 768px) {
+  .team__content-box--heading {
+    width: 100%;
+    text-align: center;
+  }
+}
 .team__content-box--parabox {
   width: 40%;
+}
+@media (max-width: 768px) {
+  .team__content-box--parabox {
+    width: 100%;
+  }
 }
 .team__intro {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 768px) {
+  .team__intro {
+    flex-direction: column;
+  }
+}
 .team__intro-box {
   width: 30%;
+}
+@media (max-width: 768px) {
+  .team__intro-box {
+    width: 100%;
+    text-align: center;
+  }
 }
 .team__intro-box--para {
   font-size: 1.8rem;

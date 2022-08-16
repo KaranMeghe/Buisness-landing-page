@@ -1,0 +1,28 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 320px:      i-phone-se
+321 - 360px:    i-phone-12-mini/motog4 
+361px - 500px:    i-phone-6/7/8/11pro/
+501px - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- iPhone-se
+- iPhone-12-mini
+- iPhone-11-12/pro
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}

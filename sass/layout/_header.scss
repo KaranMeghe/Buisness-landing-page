@@ -2,6 +2,10 @@
   height: 90vh;
   background-color: var(--bg-gray);
 
+  @include respond(phone) {
+    height: 100vh;
+  }
+
   &__hero {
     display: flex;
     justify-content: space-evenly;
@@ -9,6 +13,11 @@
     align-items: center;
     height: 80vh;
     padding: 0 8rem;
+    @include respond(phone) {
+      flex-direction: column;
+      padding: 0 1.2rem;
+      margin-top: 5rem;
+    }
 
     &-imagebox {
       width: 36%;
@@ -17,6 +26,10 @@
       background-image: url(.././images/hero.jpg);
       background-position: center;
       background-size: cover;
+
+      @include respond(phone) {
+        width: 100%;
+      }
     }
     &-form {
       max-width: 100%;
@@ -24,6 +37,10 @@
       &--input {
         width: 92%;
         padding: 2.4rem 4rem;
+
+        @include respond(phone) {
+          width: 100%;
+        }
       }
 
       &--icon {
@@ -40,6 +57,11 @@
 
   &__hero-infobox {
     width: 40%;
+    margin-top: 3rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &--btn {
       position: absolute;

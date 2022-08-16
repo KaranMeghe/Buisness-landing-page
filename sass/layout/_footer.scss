@@ -13,6 +13,7 @@
   &__socialmedia {
     display: flex;
     align-items: center;
+
     &-list--icon {
       margin-left: 2rem;
       font-size: 1.2rem;
@@ -34,9 +35,17 @@
     align-items: center;
     height: 20vh;
 
+    @include respond(phone) {
+      align-items: baseline;
+    }
+
     &-container {
       color: var(--white);
       margin-top: 3rem;
+
+      @include respond(phone) {
+        margin-left: 1rem;
+      }
     }
 
     &-li {
